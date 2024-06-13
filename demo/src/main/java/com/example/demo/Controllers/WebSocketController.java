@@ -20,7 +20,7 @@ public class WebSocketController {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    @GetMapping("/game/{gameId}")
+    @GetMapping("/websocket/game/{gameId}")
     public String getGame(@PathVariable String gameId) throws IOException {
         // Load the JSON file from the resources directory
         Resource resource = resourceLoader.getResource("classpath:games/game1/" + gameId + ".json");
